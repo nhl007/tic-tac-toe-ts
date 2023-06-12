@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import './App.css';
 
 function App() {
   const [playerMark, setPlayerMark] = useState<'X' | 'O'>('X');
@@ -28,7 +27,9 @@ function App() {
         />
       ))}
       <div className=' feedback'>{entry}</div>
-      <button onClick={() => window.location.reload()}>Reset </button>
+      <button className='reset' onClick={() => window.location.reload()}>
+        Reset
+      </button>
     </div>
   );
 }
